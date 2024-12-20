@@ -1,9 +1,12 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react';
+import { ApiContext } from '../context/ApiContext';
 
 const HomePage = () => {
+    //Programatically navigation
+    console.log(useContext(ApiContext))
   const navigate = useNavigate();
-  
 function handleClick(){
   navigate('/about')
 }
