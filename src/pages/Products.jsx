@@ -1,8 +1,12 @@
 import axios from "axios"
 import { Link } from "react-router-dom"
 import { useEffect} from "react"
+import { useContext } from 'react';
+import { ApiContext } from '../context/ApiContext';
 
 const Products = ({products,setProducts}) => {
+    // //Programatically navigation
+        console.log(useContext(ApiContext))
     useEffect(() => {
         axios.get("https://fakestoreapi.com/products").then((data) => {
             setProducts(data.data)
